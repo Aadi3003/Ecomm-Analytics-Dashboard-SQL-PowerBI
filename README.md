@@ -51,3 +51,4 @@ ORDER BY total_spent DESC;
 
 ## Dashboard (Supporting)
 Power BI dashboard available in `/powerbi/` for visualisation of SQL-derived insights.
+<img width="1311" height="737" alt="Screenshot 2026-04-24 190156" src="https://github.com/user-attachments/assets/6db2031c-59c7-4fde-9dce-d35bdcbbc88e" />
