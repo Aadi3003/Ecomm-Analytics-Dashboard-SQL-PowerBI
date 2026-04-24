@@ -10,7 +10,7 @@ This project analyses e-commerce transaction data to derive insights on revenue,
 * Payment success rate analysis
 * Order status distribution and pending order tracking
 
-## 🛠️ Tech Stack
+## Tech Stack
 * SQL (MySQL)
 * Power BI (Data modelling, DAX, Dashboarding)
 
@@ -27,13 +27,13 @@ Key queries included:
 * `sql/` → SQL queries used for analysis
 * `dashboard/` → Power BI dashboard file (.pbix)
 
-## 📌 Key Insights
+## Key Insights
 * Total Revenue: ₹77K
 * Payment Success Rate: 80%
 * Majority orders are successfully delivered (~66%)
 * Electronics category dominates revenue
 
-## 🚀 How to Use
+## How to Use
 1. Load CSV files into Power BI
 2. Recreate relationships
 3. Open `.pbix` file to view the dashboard
