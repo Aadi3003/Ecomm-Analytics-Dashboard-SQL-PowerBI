@@ -1,4 +1,4 @@
-# Ecommerce SQL Analytics
+# Ecommerce Analytics
 
 ## Overview
 This project analyses e-commerce transaction data using SQL to extract business insights around revenue, customer behaviour, and order lifecycle.
