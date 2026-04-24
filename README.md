@@ -1,4 +1,4 @@
-# E-Commerce Analytics Dashboard (SQL + Power BI)
+# E-Commerce Analytics (SQL + Power BI)
 
 ## 📊 Overview
 
