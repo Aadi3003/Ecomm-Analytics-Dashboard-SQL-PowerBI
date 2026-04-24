@@ -1,39 +1,55 @@
-# E-Commerce Analytics (SQL+PowerBI)
+# Ecommerce SQL Analytics
 
 ## Overview
-This project analyses e-commerce transaction data to derive insights on revenue, customer behaviour, and order outcomes.
+This project analyses e-commerce transaction data using SQL to extract business insights around revenue, customer behaviour, and order lifecycle.
 
-## Key Features
-* Revenue analysis based on delivered orders
-* Customer spending insights (Top Customers)
-* Category-wise revenue breakdown
-* Payment success rate analysis
-* Order status distribution and pending order tracking
+## Key SQL Analysis
+The core of this project lies in SQL-based KPI generation.
 
-## Tech Stack
-* SQL (MySQL)
-* Power BI (Data modelling, DAX, Dashboarding)
+📄 View full queries: `/sql/kpi_queries.sql`
 
-## SQL Analysis
-View KPI queries: `/sql/kpi_queries.sql`
-Key queries included:
-- Revenue calculation with business constraints (delivered orders only)
-- Category-wise revenue using multi-table joins
-- Top customers based on total spending
-- Payment success rate calculation
-
-## Project Structure
-* `data/` → Raw datasets (CSV)
-* `sql/` → SQL queries used for analysis
-* `dashboard/` → Power BI dashboard file (.pbix)
+### Business Problems Solved
+* Identify **top customers by revenue contribution**
+* Analyse **revenue distribution across product categories**
+* Track **order lifecycle (delivered, pending, cancelled)**
+* Measure **payment success rate**
 
 ## Key Insights
-* Total Revenue: ₹77K
+* Total Revenue (Delivered Orders): ₹77K
 * Payment Success Rate: 80%
-* Majority orders are successfully delivered (~66%)
-* Electronics category dominates revenue
+* High revenue concentration among top customers
+* Category-level revenue variation observed
+* Pending and cancelled orders highlight operational gaps
 
-## How to Use
-1. Load CSV files into Power BI
-2. Recreate relationships
-3. Open `.pbix` file to view the dashboard
+## Sample SQL Query
+
+```sql
+-- Top Customers by Revenue
+SELECT 
+    u.name,
+    SUM(o.total_amount) AS total_spent
+FROM users u
+JOIN orders o ON u.user_id = o.user_id
+WHERE o.status = 'delivered'
+GROUP BY u.name
+ORDER BY total_spent DESC;
+```
+
+## Workflow
+1. Data cleaned and structured using SQL
+2. KPIs derived through analytical queries
+3. Results visualised using Power BI
+
+## Tech Stack
+
+* SQL (MySQL)
+* Power BI (Data modelling, DAX, visualisation)
+
+## Project Structure
+
+* `data/` → Raw datasets (CSV)
+* `sql/` → SQL queries for KPI analysis
+* `powerbi/` → Dashboard file (.pbix)
+
+## Dashboard (Supporting)
+Power BI dashboard available in `/powerbi/` for visualisation of SQL-derived insights.
